@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store Project</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grocery Store Project</h1>
+    <h2>By Thien Kim Tran</h2>
+
+    <h3>Relations:</h3>
+    <ul>
+        <li><a href="category.php">Category</a></li>
+        <li><a href="grocery.php">Grocery</a></li>
+        <li><a href="stock.php">Stock</a></li>
+        <li><a href="store.php">Store</a></li>
+        <li><a href="category_grocery.php">Category_Grocery</a></li>
+        <li><a href="grocery_stock_store.php">Grocery_Stock_Store</a></li>
+    </ul>
+
+    <h3>Queries:</h3>
+    <ul>
+        <li><a href="query1.php">Query1: List all groceries with their categories and store locations</a></li>
+        <li><a href="query2.php">Query2: Calculate the average price of all groceries</a></li>
+        <li><a href="query3.php">Query3: Find all stores that stock 'Milk'</a></li>
+        <li><a href="query4.php">Query4: List total stock quantities for stores with more than 50 items</a></li>
+        <li><a href="query5.php">Query5: List all groceries with their stock quantities, including those not stocked</a></li>
+    </ul>
+
+    <h3>Ad-hoc Query:</h3>
+    <form action="adhoc_query.php" method="POST">
+        <label for="query">Please enter your query here:</label><br>
+        <textarea id="query" name="query" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+    </form>
+</body>
+</html>
+
+
+

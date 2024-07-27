@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+}
+
+.left-panel, .right-panel {
+    padding: 50px;
+    width: 50%;
+}
+
+.left-panel {
+    background: linear-gradient(45deg, #ff3d69, #ff6f91);
+    color: white;
+    text-align: center;
+}
+
+.left-panel h1 {
+    margin-bottom: 10px;
+}
+
+.left-panel p {
+    margin-bottom: 20px;
+}
+
+.right-panel {
+    background-color: #f4f5f7;
+}
+
+.right-panel h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.right-panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-panel form label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.right-panel form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.right-panel form button {
+    padding: 10px;
+    background-color: #ff3d69;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.right-panel form button:hover {
+    background-color: #e62a5a;
+}
+
+.right-panel .social-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-panel .social-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.right-panel .social-buttons button.twitter {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.right-panel .social-buttons button.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+

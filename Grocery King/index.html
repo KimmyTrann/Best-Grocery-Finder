@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f5f7;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #ff3d69;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #ff3d69;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #e62a5a;
+        }
+        .task-card, .query-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .task-status, .query-status {
+            display: flex;
+            align-items: center;
+        }
+        .task-status span, .query-status span {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .pending {
+            background-color: #ffd4d4;
+            color: #ff3d69;
+        }
+        .completed {
+            background-color: #d4ffda;
+            color: #28a745;
+        }
+        .dashboard-widgets {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .widget {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 48%;
+        }
+        .widget h3 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .progress {
+            height: 200px;
+        }
+        .relations, .queries {
+            margin-bottom: 20px;
+        }
+        .relations ul, .queries ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .relations li, .queries li {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .relations a, .queries a {
+            text-decoration: none;
+            color: #ff3d69;
+        }
+        .relations a:hover, .queries a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Grocery Store</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tasks</a>
+            <a href="#">Team</a>
+            <a href="#">Documents</a>
+            <a href="#">Projects</a>
+            <a href="#">Calendar</a>
+            <a href="#">Settings</a>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Grocery Search Dashboard</h1>
+            <button>+ New Task</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for groceries...">
+            <button>Search</button>
+        </div>
+        <div class="tasks">
+            <div class="task-card">
+                <div>
+                    <h3>Review development team implementations</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="task-status">
+                    <a href="#">View task</a>
+                    <span class="pending">Pending</span>
+                </div>
+            </div>
+            <div class="task-card">
+                <div>
+                    <h3>Review development team implementations</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="task-status">
+                    <a href="#">View task</a>
+                    <span class="completed">Completed</span>
+                </div>
+            </div>
+        </div>
+        <div class="relations">
+            <h3>Relations:</h3>
+            <ul>
+                <li><a href="category.php">Category</a></li>
+                <li><a href="grocery.php">Grocery</a></li>
+                <li><a href="stock.php">Stock</a></li>
+                <li><a href="store.php">Store</a></li>
+                <li><a href="category_grocery.php">Category_Grocery</a></li>
+                <li><a href="grocery_stock_store.php">Grocery_Stock_Store</a></li>
+            </ul>
+        </div>
+        <div class="queries">
+            <h3>Queries:</h3>
+            <ul>
+                <li><a href="query1.php">Query1: List all groceries with their categories and store locations</a></li>
+                <li><a href="query2.php">Query2: Calculate the average price of all groceries</a></li>
+                <li><a href="query3.php">Query3: Find all stores that stock 'Milk'</a></li>
+                <li><a href="query4.php">Query4: List total stock quantities for stores with more than 50 items</a></li>
+                <li><a href="query5.php">Query5: List all groceries with their stock quantities, including those not stocked</a></li>
+            </ul>
+        </div>
+        <h3>Ad-hoc Query:</h3>
+        <form action="adhoc_query.php" method="POST">
+            <label for="query">Please enter your query here:</label><br>
+            <textarea id="query" name="query" rows="4" cols="50"></textarea><br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+        </form>
+        <div class="dashboard-widgets">
+            <div class="widget">
+                <h3>Search History</h3>
+                <div class="progress">
+                    <!-- Add your search history details here -->
+                    <p>No search history available...</p>
+                </div>
+            </div>
+            <div class="widget">
+                <h3>Price Comparison</h3>
+                <div class="progress">
+                    <!-- Add your price comparison chart here -->
+                    <p>Price comparison chart goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
